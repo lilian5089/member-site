@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>メンバー</title>
+
+    <style>
+        .page {
+            display: flex;
+            gap: 30px;
+            width: 90%;
+            margin: auto;
+        }
+        .filter {
+            width: 180px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            height: fit-content;   
+            box-shadow: 0 5px 15px lightgray;
+        }
+        .filter button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            background: white;
+            border: 1px solid gray;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .filter button:hover {
+            background: #f47ca6;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        body {
+            background-color: #fff5f8;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #a61e6d;
+        }
+        
+        .members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            width: 180px;
+            margin: 20px auto;
+            padding: 15px;
+            box-shadow: 0 5px 15px lightgray;
+        }
+
+        .card img {
+            width: 170px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        a {
+            color: #a61e6d;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <script>
+function filterMembers(generation) {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card) {
+        if (generation === '全部') {
+            card.style.display = 'block';
+        } else if (card.dataset.generation === generation) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+
+    <h1>🌸 MEMBER 🌸</h1>
+    <div class="page">
+
+    <div class="filter">
+        <h3>メンバー</h3>
+        <button onclick="filterMembers('全部')">全部</button>
+        <button onclick="filterMembers('二期生')">二期生</button>
+        <button onclick="filterMembers('三期生')">三期生</button>
+        <button onclick="filterMembers('四期生')">四期生</button>
+    </div><!-- filter -->
+
+     <div class="members">
+     <div class="card" data-generation="二期生">
+            <img src="森田ひかる.png" alt="member photo">
+            <h2>森田ひかる</h2>
+            <p>誕生日：2001/07/10</p>
+            <p>期別：二期生</p>
+            <p>星座：かに座</p>
+            <p>身長：150.5cm</p>
+            <p>出身地：福岡県</p>
+            センター曲：<br>
+            Nobody's Fault<br>
+            BAN<br>
+            承認欲求<br>
+            UTAGAWA GENERATION<br>
+            Lonesome Rabbit
+            </p>
+    </div>
+    <div class="card" data-generation="二期生">
+            <img src="山﨑天.png" alt="member photo">
+            <h2>山﨑天</h2>
+            <p>誕生日：2005年9月28日</p>
+            <p>期別：二期生</p>
+            <p>星座：んびん座   </p>
+            <p>身長：168.4cm</p>
+            <p>出身地：大阪府</p>
+            センター曲：<br>
+            五月雨よ<br>
+            何歳の頃に戻りたいのか?<br>
+            </p>
+    </div>
+    <div class="card" data-generation="三期生">
+            <img src="山下瞳月.png" alt="member photo">
+            <h2>山下瞳月</h2>
+            <p>誕生日：2005/01/22</p>
+            <p>期別：三期生</p>
+            <p>星座：みずがめ座</p>
+            <p>身長：152cm</p>
+            <p>出身地：京都府</p>
+            センター曲：<br>
+            自業自得<br>
+            I want tomorrow to come<br>
+            </P>
+    </div>
+    <div class="card" data-generation="四期生">
+            <img src="浅井恋乃未.png" alt="member photo">
+            <h2>浅井恋乃未</h2>
+            <p>誕生日：2004/12/22</p>
+            <p>期別：四期生</p>
+            <p>星座：やぎ座</p>
+            <p>身長：156cm</p>
+            <p>出身地：埼玉県</p>
+            センター曲：<br>
+            光源<br>
+            </p>
+    </div>
+    <div class="card" data-generation="二期生">
+            <img src="藤吉夏鈴.png" alt="member photo">
+            <h2>藤吉夏鈴</h2>
+            <p>誕生日：2001年8月29日</p>
+            <p>期別：二期生</p>
+            <p>星座：おとめ座</p>
+            <p>身長：166.5cm</p>
+            <p>出身地：大阪府</p>
+            センター曲：<br>
+            Start Over<br>
+            The Growing Up Train<br>
+            </p>
+    </div>
+     <div class="card" data-generation="三期生">
+            <img src="谷口愛季.png" alt="member photo">
+            <h2>谷口愛季</h2>
+            <p>誕生日：2005年4月12日</p>
+            <p>期別：三期生</p>
+            <p>星座：おひつじ座</p>
+            <p>身長：151cm</p>
+            <p>出身地：山口県</p>
+            センター曲：<br>
+            夏の近道<br>
+            木枯らしは泣かない<br>
+            </p>
+    </div>
+    <div class="card" data-generation="二期生">
+            <img src="増本綺良.png" alt="member photo">
+            <h2>増本綺良</h2>
+            <p>誕生日：2002年1月12日</p>
+            <p>期別：三期生</p>
+            <p>星座：やぎ座</p>
+            <p>身長：158.4cm</p>
+            <p>出身地：兵庫県</p>
+            センター曲：<br>
+            コンビナート<br>
+            </p>
+    </div>
+    </div><!-- members -->
+</div><!-- page --> 
+
+<a href="index.html">回首頁</a>
+
+</body>
+</html>
