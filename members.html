@@ -70,7 +70,43 @@
             font-weight: bold;
             font-size: 20px;
         }
-        
+        /* 手機版 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+        padding: 0 20px;
+    }
+
+    .page {
+        flex-direction: column;
+        width: 95%;
+        gap: 20px;
+    }
+
+    .filter {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .members {
+        justify-content: center;
+    }
+
+    .card {
+        width: 85%;
+        max-width: 320px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
     </style>
 </head>
 
